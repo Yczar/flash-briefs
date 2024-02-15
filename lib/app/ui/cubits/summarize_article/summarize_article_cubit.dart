@@ -9,7 +9,8 @@ class SummarizeArticleCubit extends Cubit<SummarizeArticleState> {
     print('Summarizing');
     emit(const SummarizeArticleState.loadInProgress());
     try {
-      const apiKey = 'AIzaSyDPambgkuU00cbqDmi4u4ZhwGlrVTDVTOI';
+      const apiKey = String.fromEnvironment('geminiAPIKey');
+
       final model = GenerativeModel(
         model: 'gemini-pro',
         apiKey: apiKey,
