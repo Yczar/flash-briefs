@@ -6,7 +6,7 @@ import 'package:flash_briefs/app/data/models/news_article.dart';
 class NewsAPIService {
   final Dio _dio = Dio();
   final String _baseUrl = 'https://newsapi.org/v2';
-  final String _apiKey = 'ae2f941cb6bf40bb901d0d61919d82aa';
+  final String _apiKey = const String.fromEnvironment('newsAPIKey');
 
   Future<List<NewsArticle>> fetchTopHeadlines() async {
     try {
