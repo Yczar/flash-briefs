@@ -3,7 +3,6 @@ import 'package:flash_briefs/app/ui/cubits/summarize_article/summarize_article_c
 import 'package:flash_briefs/app/ui/cubits/summarize_article/summarize_article_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
 import 'package:html/dom.dart' as dom;
@@ -31,7 +30,6 @@ class _NewsSummaryScreenState extends State<NewsSummaryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(_summarizeArticleCubit.state);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
