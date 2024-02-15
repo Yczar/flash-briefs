@@ -54,7 +54,6 @@ class ArticleCardWidget extends StatelessWidget {
 
 class _ArticleImage extends StatelessWidget {
   const _ArticleImage({
-    super.key,
     required this.imageUrl,
   });
   final String? imageUrl;
@@ -77,7 +76,6 @@ class _ArticleImage extends StatelessWidget {
 
 class _ArticleTitle extends StatelessWidget {
   const _ArticleTitle({
-    super.key,
     required this.title,
   });
   final String? title;
@@ -99,7 +97,6 @@ class _ArticleTitle extends StatelessWidget {
 
 class _ArticleAuthorAndDate extends StatelessWidget {
   const _ArticleAuthorAndDate({
-    super.key,
     required this.article,
   });
   final NewsArticle article;
