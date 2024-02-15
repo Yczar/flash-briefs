@@ -1,4 +1,3 @@
-import 'package:flash_briefs/app/data/service/news_api_service.dart';
 import 'package:flash_briefs/app/ui/widgets/post_lists_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:flash_briefs/app/ui/cubits/top_headlines/top_headlines_cubit.dart';
@@ -6,7 +5,6 @@ import 'package:flash_briefs/app/ui/cubits/top_headlines/top_headlines_state.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nested/nested.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -44,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     'assets/images/profile_image.png',
                     height: 49,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 16,
                   ),
                   Column(
