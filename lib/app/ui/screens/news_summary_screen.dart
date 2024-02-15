@@ -72,7 +72,7 @@ class _NewsSummaryScreenState extends State<NewsSummaryScreen> {
                                   height: 10,
                                 ),
                                 Text(
-                                  '...Generating summary',
+                                  '...Generating summary with Gemini',
                                   style: TextStyle(
                                     fontSize: 16.0,
                                     color: Colors.black,
