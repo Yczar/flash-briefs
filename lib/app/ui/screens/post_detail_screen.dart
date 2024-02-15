@@ -1,4 +1,5 @@
 import 'package:flash_briefs/app/data/models/news_article.dart';
+import 'package:flash_briefs/app/ui/screens/news_summary_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,7 +8,7 @@ import 'package:intl/intl.dart';
 class PostDetailScreen extends StatelessWidget {
   final NewsArticle article;
 
-  const PostDetailScreen({Key? key, required this.article}) : super(key: key);
+  const PostDetailScreen({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +22,21 @@ class PostDetailScreen extends StatelessWidget {
         foregroundColor: Colors.black,
         elevation: 1,
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // Navigate to the summary screen
-          // Navigator.of(context).push(MaterialPageRoute(
-          //   builder: (context) => NewsSummaryScreen(post: post),
-          // ));
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => NewsSummaryScreen(
+              article: article,
+            ),
+          ));
         },
-        child: const Icon(
+        tooltip: 'Summarize',
+        label: const Text(
+          'Summarize',
+        ),
+        icon: const Icon(
           Icons.summarize,
         ),
-        tooltip: 'Summarize',
       ),
       body: Column(
         children: [

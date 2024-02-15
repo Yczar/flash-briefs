@@ -21,7 +21,6 @@ class NewsAPIService {
       log('Articles $articles');
       return articles.map((article) => NewsArticle.fromJson(article)).toList();
     } catch (error) {
-      print(error);
       throw Exception('Failed to load top headlines');
     }
   }
