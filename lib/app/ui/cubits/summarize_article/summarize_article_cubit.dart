@@ -1,12 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:flash_briefs/app/ui/cubits/summarize_article/summarize_article_state.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 class SummarizeArticleCubit extends Cubit<SummarizeArticleState> {
   SummarizeArticleCubit() : super(const SummarizeArticleState.initial());
   Future<void> summarizeArticle(String webContent) async {
-    print('Summarizing');
     emit(const SummarizeArticleState.loadInProgress());
     try {
       const apiKey = String.fromEnvironment('geminiAPIKey');
@@ -28,7 +26,6 @@ class SummarizeArticleCubit extends Cubit<SummarizeArticleState> {
 
       emit(SummarizeArticleState.loadSuccess([response.text ?? '']));
     } catch (error) {
-      print(error);
       emit(const SummarizeArticleState.loadFailure());
     }
   }
