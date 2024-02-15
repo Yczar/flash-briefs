@@ -23,8 +23,8 @@ Flash Brief is an innovative application leveraging Google's Generative AI(Gemin
    First, clone this repository to your local machine using Git.
 
    ```bash
-   git clone https://github.com/yourusername/yourprojectname.git
-   cd yourprojectname
+   git clone https://github.com/Yczar/flash-briefs.git
+   cd flash-briefs
    ```
 
 2. **Install Dependencies**
@@ -46,7 +46,7 @@ Flash Brief is an innovative application leveraging Google's Generative AI(Gemin
    Then, execute the following command to run the app:
 
    ```bash
-   flutter run
+   flutter run --dart-define=newsAPIKey=NEWS_API_KEY --dart-define=geminiAPIKey=GEMINI_API_KEY
    ```
 
 ## Using the App
