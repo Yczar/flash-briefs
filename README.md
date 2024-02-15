@@ -1,6 +1,6 @@
 # Flash Brief
 
-Flash Brief is an innovative application leveraging Google's Generative AI to provide concise, accurate summaries of lengthy text content. Designed to enhance productivity and information absorption, Flash Brief aims to transform the way users interact with digital content, making it easier to consume large volumes of information quickly and efficiently.
+Flash Brief is an innovative application leveraging Google's Generative AI(Gemini) to provide concise, accurate summaries of lengthy text content. Designed to enhance productivity and information absorption, Flash Brief aims to transform the way users interact with digital content, making it easier to consume large volumes of information quickly and efficiently.
 
 ![RPReplay_Final1707975915](https://github.com/Yczar/flash-briefs/assets/32166619/1a0ada93-9b97-405a-99f7-c60bed135a39)
 
@@ -68,11 +68,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Mention any inspirations, code snippets, etc.
-- Any acknowledgments go here.
 
 ```
 
