@@ -9,7 +9,15 @@ Flash Briefs is an innovative application leveraging Google's Generative AI(Gemi
 - **AI-Powered Summaries**: Utilizes the latest advancements in Google's Generative AI to generate precise summaries.
 - **User-Friendly Interface**: A clean, intuitive interface allows for easy navigation and operation.
 
-## Installation
+## Getting Started
+
+### API keys
+
+To run the app, you'll need a Gemini API key. If you don't already have one,
+create a key in Google AI Studio: https://makersuite.google.com/app/apikey.
+
+You will also need a News API key. If you don't already have one, create one here:
+https://newsapi.org/
 
 ### Prerequisites
 
