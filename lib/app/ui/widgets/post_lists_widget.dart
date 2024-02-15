@@ -14,7 +14,6 @@ class PostListsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      color: Colors.blue,
       onRefresh: () async {
         context.read<TopHeadlinesCubit>().fetchTopHeadlines();
       },
