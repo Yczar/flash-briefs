@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flash_briefs/app/data/models/news_article.dart';
 import 'package:flash_briefs/app/ui/screens/news_summary_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +47,8 @@ class PostDetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (article.urlToImage != null)
-                    Image.network(
-                      article.urlToImage!,
+                    CachedNetworkImage(
+                      imageUrl: article.urlToImage!,
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
@@ -92,20 +93,15 @@ class PostDetailScreen extends StatelessWidget {
             child: const Text('Continue Reading'),
           ),
           const SizedBox(
-            height: 20,
+            height: 50,
           ),
         ],
       ),
     );
   }
-}
 
-Future<void> _launchURL(String url) async {
-  final chromeSafariBrowser = ChromeSafariBrowser();
-  chromeSafariBrowser.open(url: Uri.parse(url));
-//   if (await canLaunchUrl(Uri.parse(url))) {
-//     await launchUrl(Uri.parse(url));
-//   } else {
-//     throw 'Could not launch $url';
-//   }
+  Future<void> _launchURL(String url) async {
+    final chromeSafariBrowser = ChromeSafariBrowser();
+    chromeSafariBrowser.open(url: Uri.parse(url));
+  }
 }
