@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flash_briefs/app/data/models/news_article.dart';
 import 'package:flash_briefs/app/ui/screens/post_detail_screen.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,9 @@ class _ArticleImage extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
-          image: NetworkImage(imageUrl ?? ''),
+          image: CachedNetworkImageProvider(
+            imageUrl ?? '',
+          ),
           fit: BoxFit.cover,
         ),
       ),
