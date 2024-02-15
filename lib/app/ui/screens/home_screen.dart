@@ -1,5 +1,5 @@
+import 'package:flash_briefs/app/ui/widgets/home_screen_header_widget.dart';
 import 'package:flash_briefs/app/ui/widgets/post_lists_widget.dart';
-import 'package:intl/intl.dart';
 import 'package:flash_briefs/app/ui/cubits/top_headlines/top_headlines_cubit.dart';
 import 'package:flash_briefs/app/ui/cubits/top_headlines/top_headlines_state.dart';
 import 'package:flutter/material.dart';
@@ -32,48 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-              ),
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/images/profile_image.png',
-                    height: 49,
-                  ),
-                  const SizedBox(
-                    width: 16,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Welcome Back!',
-                        style: GoogleFonts.openSans().copyWith(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 16,
-                          color: const Color(0xFF19202D),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 7,
-                      ),
-                      Text(
-                        DateFormat("MMM d, yyyy").format(
-                          DateTime.now(),
-                        ),
-                        style: GoogleFonts.openSans().copyWith(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 12,
-                          color: const Color(0xFF19202D),
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
+            const HomeScreenHeaderWidget(),
             const SizedBox(
               height: 30,
             ),
@@ -96,7 +55,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     return state.when(
                       initial: () => const SizedBox.shrink(),
                       loadInProgress: () => const Center(
-                        child: CircularProgressIndicator(strokeWidth: 2),
+                        child: IntrinsicHeight(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 18,
+                                width: 18,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '...Loading news',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                       loadSuccess: (articles) => PostListsWidget(
                         articles: articles,
